@@ -1,0 +1,22 @@
+body, html {
+  font-family: 'Lato', sans-serif !important;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.box {
+  border: 8px solid #fff;
+  padding: 20px;
+  max-width: 650px;
+}
+
+.title {
+  font-family: 'Mukta Vaani', sans-serif !important;
+}
