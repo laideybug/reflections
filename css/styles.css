@@ -13,7 +13,7 @@ body, html {
 
 .title {
   font-family: 'Mukta Vaani', sans-serif !important;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
 }
 
 .box {
-  border: 4px solid #fff;
+  border: 8px solid #fff;
   padding: 20px;
   max-width: 650px;
 }

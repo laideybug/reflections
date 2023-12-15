@@ -34,12 +34,21 @@ function applyRandomBackgroundImage() {
 }
 
 const images = [
+  'field1.jpg',
+  'field2.jpg',
   'forest1.jpg',
   'forest2.jpg',
+  'forest3.jpg',
+  'forest4.jpg',
   'mountain1.jpg',
   'mountain2.jpg',
+  'mountain3.jpg',
+  'mountain4.jpg',
+  'mountain5.jpg',
   'ocean1.jpg',
-  'ocean2.jpg'
+  'ocean2.jpg',
+  'ocean3.jpg',
+  'ocean4.jpg'
 ]
 
 function showCurrentReflection() {
