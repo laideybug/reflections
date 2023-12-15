@@ -1,5 +1,5 @@
 function applyRandomBackgroundColour() {
-  const randomIndex = Math.floor(Math.random() * colours.length)
+  const randomIndex = Math.floor(Math.random() * colours.length);
   const colour = colours[randomIndex];
   document.body.style.background = colour;
 }
@@ -26,9 +26,29 @@ const colours = [
   '#222f3e'  // Imperial Primer 
 ];
 
+function applyRandomBackgroundImage() {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const image = images[randomIndex];
+  const imageUrl = 'images/' + image;
+  document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${imageUrl})`;
+}
+
+const images = [
+  'forest1.jpg',
+  'forest2.jpg',
+  'mountain1.jpg',
+  'mountain2.jpg',
+  'ocean1.jpg',
+  'ocean2.jpg'
+]
+
 function showCurrentReflection() {
-  const randomIndex = Math.floor(Math.random() * reflections.length)
-  const reflection = reflections[randomIndex];
+  const randomIndex = Math.floor(Math.random() * reflections.length);
+  const currentDate = new Date();
+  const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
+  const millisecondsInADay = 1000 * 60 * 60 * 24;
+  const dayOfYear = Math.floor((currentDate - startOfYear) / millisecondsInADay) - 1;
+  const reflection = reflections[dayOfYear];
   const element = document.getElementById('reflection');
   if (element) {
     element.textContent = reflection;
@@ -394,7 +414,41 @@ const reflections = [
   "Follow nature's course, find peace."
 ];
 
+function showDate() {
+  const currentDate = new Date();
+  const month = currentDate.getMonth();
+  const currentMonth = monthNames[month];
+  const day = currentDate.getDate();
+  const daySuffix = getDaySuffix(day);
+  const element = document.getElementById('date');
+  if (element) {
+    element.textContent = `${currentMonth} ${day}${daySuffix}`;
+  }
+}
+
+const monthNames = [
+  'January', 'February', 'March', 'April', 'May', 'June', 'July',
+  'August', 'September', 'October', 'November', 'December'
+];
+
+function getDaySuffix(day) {
+  if (day >= 11 && day <= 13) {
+    return 'th';
+  }
+  switch (day % 10) {
+    case 1:
+      return 'st';
+    case 2:
+      return 'nd';
+    case 3:
+      return 'rd';
+    default:
+      return 'th';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  applyRandomBackgroundColour();
+  applyRandomBackgroundImage();
   showCurrentReflection();
+  showDate();
 });
