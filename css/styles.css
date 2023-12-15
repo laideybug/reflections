@@ -14,8 +14,6 @@ body, html {
 .title {
   font-family: 'Mukta Vaani', sans-serif !important;
   font-size: 4rem;
-  display: inline-block;
-  transform: rotate(90deg);
 }
 
 a {
