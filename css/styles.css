@@ -11,11 +11,6 @@ body, html {
   align-items: center;
 }
 
-.title {
-  font-family: 'Mukta Vaani', sans-serif !important;
-  font-size: 3rem;
-}
-
 a {
   color: inherit;
   text-decoration: inherit;
