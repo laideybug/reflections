@@ -52,7 +52,6 @@ const images = [
 ]
 
 function showCurrentReflection() {
-  const randomIndex = Math.floor(Math.random() * reflections.length);
   const currentDate = new Date();
   const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
   const millisecondsInADay = 1000 * 60 * 60 * 24;
@@ -420,7 +419,20 @@ const reflections = [
   "Find joy in the journey.",
   "Choose actions over reactions.",
   "Savor each moment mindfully.",
-  "Let silence be your refuge."
+  "Let silence be your refuge.",
+  "Question your beliefs. They shape your world.",
+  "In uncertainty, opportunity awaits discovery.",
+  "The mind is a canvas. Choose your thoughts wisely.",
+  "To understand others, seek first to understand yourself.",
+  "Change your perspective; change your reality.",
+  "Silence often speaks the loudest truths.",
+  "Doubt is the path to deeper understanding.",
+  "Complexity often hides simplicity's beauty.",
+  "Embrace failure. It's a stepping stone to success.",
+  "In challenges, find the seeds of growth.",
+  "Your thoughts create your destiny. Choose them well.",
+  "The unexamined life is a missed opportunity.",
+  "In moments of doubt, seek your inner light."
 ];
 
 function showDate() {
